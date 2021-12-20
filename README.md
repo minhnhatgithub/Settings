@@ -383,3 +383,12 @@
 
             }
         }
+        int rows = 0;
+        dataGridView1.Invoke((MethodInvoker)delegate ()
+        {
+            int rowss = dataGridView1.Rows.Add();
+            DataGridViewRow row = dataGridView1.Rows[rowss];
+            dataGridView1.Refresh();
+            row.Cells[0].Value = ("Máy " + row.Index).ToString();
+            rows = rowss; // (row.Index + "Máy" + 1).ToString();
+        });
