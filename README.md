@@ -1,13 +1,4 @@
- void Delay(int timedelay)
-        {
-            while (timedelay > 0)
-            {
-                Thread.Sleep(TimeSpan.FromSeconds(1));
-                timedelay--;
-                if (isStop)
-                    break;
-            }
-        }
+
         bool edit_row(int rows, int cell, string value, bool showtime = false, int time = 10)
         {
             try
