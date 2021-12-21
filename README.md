@@ -392,3 +392,15 @@
             row.Cells[0].Value = ("Máy " + row.Index).ToString();
             rows = rowss; // (row.Index + "Máy" + 1).ToString();
         });
+        
+        
+           List<string> devices = new List<string>();
+            var listdevices = KAutoHelper.ADBHelper.GetDevices();
+            if (listdevices != null && listdevices.Count > 0)
+            {
+                devices = listdevices;
+            }
+            else
+            {
+                MessageBox.Show("Cậu chủ kiểm tra lại điện thoại coi cắm dây chưa kìa", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
